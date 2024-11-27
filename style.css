@@ -1,0 +1,733 @@
+:root{
+    --skyblue:#b3bfff;
+}
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Modak', sans-serif;
+    -webkit-text-stroke: 0.1px black;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: #fff;
+    border: 0.1rem solid #333;
+    border-radius: .5rem;
+}
+
+.heading span{
+   color: #ff934f; 
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #ff934f;
+    color: #fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    font-family: "Playpen Sans", cursive;
+}
+
+.btn:hover{
+    background:#e96514;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,1);
+}
+
+header .logo{
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+header .logo span{
+    color: #ff934f;
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #333;
+    font-family: "Playpen Sans", cursive;
+}
+
+header .navbar a:hover{
+    color: #ff934f;
+    border-bottom: 2px solid #ff934f;
+    transition: all .3s ease-out;
+}
+
+header .icons a{
+    font-size: 3rem;
+    color: #333;
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover{
+    color: #ff934f;
+}
+
+header #toogler{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: 1rem solid rgba(0,0,0,3);
+    display: none;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 50rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    color: #ff934f;
+    font-family: 'Modak', sans-serif;
+}
+
+.home .content span{
+    font-size: 2.5rem;
+    color: #333;
+    padding: 1rem 0;
+    line-height: 1.5;
+    font-family: "Playpen Sans", cursive;
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    color: #333;
+    padding: 1rem 0;
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+}
+
+.about{
+    background: url(bg2.png);
+    background-size: cover;
+    background-position: center;
+}
+.about .row{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+
+.about .row .video-container{
+    flex: 1 1 40rem;
+    position: relative;
+}
+.about .row .video-container video{
+    width: 100%;
+    border: 1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,1);
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .row .video-container h3{
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    font-size: 3rem;
+    background-color: #fff;
+    border: #333;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+
+.about .row .content{
+    flex: 1 1 40rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color: #ff934f;
+    font-family: "Playpen Sans", cursive;
+}
+
+.about .row .content p{
+    font-size: 1.5rem;
+    color: #333;
+    padding: 5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+}
+
+.icons-container{
+    background: #fff4bc;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+
+.icons-container .icons{
+    background: #fff;
+    border: .1rem solid rgba(0,0,0,1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+}
+
+.icons-container .icons img{
+    height: 5rem;
+    margin-right: 2rem;
+}
+
+.icons-container .icons h3{
+  color: #333;
+  padding-bottom: .5rem;
+  font-size: 1.5rem;
+  font-family: "Playpen Sans", cursive;
+}
+
+.icons-container .icons span{
+    color: #555;
+    font-size: 1.3rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.products {
+    background: url(bg3.png) repeat;
+    background-size: auto; 
+    background-position: left top; 
+}
+
+
+#products {
+    padding: 40px 20px;
+    background-color: #fff;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: "Playpen Sans", cursive;
+}
+
+
+/* Product Sections */
+.product-section {
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 10px; /* Jarak dari atas */
+    right: 10px; /* Jarak dari kanan */
+    background-color: #e74c3c; /* Warna badge */
+    color: white; /* Warna teks */
+    font-size: 1.5rem; /* Ukuran teks */
+    font-weight: bold; /* Tebal teks */
+    padding: 5px 10px; /* Padding dalam badge */
+    border-radius: 5px; /* Sudut membulat */
+    z-index: 1; /* Pastikan badge berada di atas gambar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+}
+
+.new-badge {
+    position: absolute;
+    top: 10px; /* Jarak dari atas */
+    right: 10px; /* Jarak dari kanan */
+    background-color: #41d848; /* Warna badge */
+    color: white; /* Warna teks */
+    font-size: 1.5rem; /* Ukuran teks */
+    font-weight: bold; /* Tebal teks */
+    padding: 5px 10px; /* Padding dalam badge */
+    border-radius: 5px; /* Sudut membulat */
+    z-index: 1; /* Pastikan badge berada di atas gambar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+}
+
+.best-seller {
+    position: absolute;
+    top: 10px; /* Jarak dari atas */
+    right: 10px; /* Jarak dari kanan */
+    background-color: #faf744; /* Warna badge */
+    color: white; /* Warna teks */
+    font-size: 1.5rem; /* Ukuran teks */
+    font-weight: bold; /* Tebal teks */
+    padding: 5px 10px; /* Padding dalam badge */
+    border-radius: 5px; /* Sudut membulat */
+    z-index: 1; /* Pastikan badge berada di atas gambar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+}
+
+.product p{
+    font-size: 2.7rem;
+    font-family: 'Modak', sans-serif;
+    color: #e74c3c;
+    -webkit-text-stroke: 0.1rem black;
+
+}
+
+.product p s {
+    color: #999;
+    font-family: "Playpen Sans", cursive;
+    font-size: 1rem;
+}
+
+.product p strong {
+    color: #e74c3c;
+    font-size: 2.7rem;
+}
+
+
+/* Hover Effects */
+.product:hover {
+    transform: translateY(-5px);
+}
+
+
+.review{
+    background: url(bg4.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.review .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.review .box-container .box{
+    flex: 1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,1);
+    border-radius: 0.5rem;
+    border: .1rem solid rgba(0,0,0,1);
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3 ease, box-shadow 0.3s ease;
+}
+
+.review .box-container .box{
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+.review-section {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.testimoni-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimoni {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.testimoni:hover {
+    transform: scale(1.05);
+}
+
+.testimoni-content {
+    display: flex;
+    align-items: center;
+}
+
+.testimoni img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.testimoni-text {
+    flex: 1;
+}
+
+.stars {
+    font-size: 2.5rem;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.testimoni-quote {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.testimoni-author {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #555;
+    font-family: "Playpen Sans", cursive;
+}
+
+.contact{
+    background: var(--skyblue);
+    background-size: cover;
+    background-position: center;
+}
+
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: left;
+}
+.contact .row form{
+   flex: 1 1 40rem;
+   padding: 20px; 
+   box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+   border: .1rem solid rgba(0, 0, 0, 0.1);
+   background: #fff;
+   border-radius: .5rem;
+}
+
+.contact .row form .box{
+    padding: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: .1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+    margin: .7rem 0;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: calc(50% - 10px);
+    padding: 10px;
+    margin: 10px 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.contact-form textarea {
+    width: calc(100% - 20px);
+    height: 100px;
+}
+
+.contact-info {
+    background-color: #ff934f;
+    color: #fff;
+    padding: 60px;
+    border-radius: 8px;
+    width: 450px;
+}
+.contact-info h3 {
+    color: #fff;
+    font-size: 3rem;
+    font-family: "Playpen Sans", cursive;
+}
+
+.contact-info p:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+.contact-info p, .contact-info a {
+    color: #fff;
+    margin: 10px 0;
+    font-size: 1.3rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.contact-info a {
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.contact-info .social-icons a {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+.map {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+iframe {
+    border: 0;
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer{
+    background-color: #fff4bc;
+}
+
+.footer .box-container .box{
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    color: #333;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    font-family: "Playpen Sans", cursive;
+}
+
+.footer .box-container .box a{
+    display: block;
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.footer .box-container .box a:hover{
+    text-decoration: underline;
+}
+
+.footer .box-container .box img{
+    margin-top: 1rem;
+}
+
+.footer .credit{
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: #333;
+    border-top: .1rem solid rgba(0, 0, 0, 0.1);
+    font-family: "Poppins", sans-serif;
+}
+
+.footer .credit span{
+    color: #ff934f;
+    -webkit-text-stroke: 0.1rem black;
+
+}
+
+
+
+
+
+
+@media (max-width:991px) {
+  
+    html{
+        font-size: 55%;
+    }   
+
+    header{
+        padding: 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+    .home{
+      background-position: left;
+    }
+}
+
+@media (max-width:768px) {
+    html .fa-bars{
+        display: block;
+    }
+    
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0,0,0,1);
+        clip-path: polygon(0 0, 100% 0, 0 0);
+    }
+
+    header #toogler:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background:#fff ;
+        border: 1rem solid rgba(0,0,0,1);
+        display: block;
+    }
+
+    .home .content h3{
+        font-size: 5rem;
+    }
+
+    .home .content span{
+        font-size: 2.5rem;
+    }
+
+    .icons-container .icons h3{
+        font-size: 2rem;
+    }
+      
+    .icons-container .icons span{
+        font-size: 1.7rem;
+    }
+
+    .testimoni-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review {
+        max-width: 100%;
+    }
+
+    .contact-info {
+        width: 80%; 
+        padding: 20px;
+        border-radius: 6px; 
+    }
+      .contact-info h3 {
+        font-size: 2rem;
+    }
+      .contact-info p, .contact-info a {
+        font-size: 1rem;
+    }
+      .contact-info .social-icons a {
+        font-size: 1.2rem;
+        margin-right: 10px;
+    }
+    .map {
+        margin-top: 10px; /* Kurangi margin atas */
+    }
+}
+
+@media (max-width:450px) {
+  
+    html{
+        font-size: 50%;
+    }
+    
+    .heading{
+        font-size: 3rem;
+    }
+
+    .contact-info {
+        width: 90%; /* Lebar hampir penuh untuk perangkat sangat kecil */
+        padding: 15px; /* Padding lebih kecil */
+        border-radius: 4px; /* Lebih ramping */
+      }
+      .contact-info h3 {
+        font-size: 1.5rem; /* Heading lebih kecil */
+        text-align: left; /* Pusatkan teks heading */
+      }
+      .contact-info p, .contact-info a {
+        font-size: 0.9rem; /* Ukuran teks lebih kecil */
+        text-align: left; /* Pusatkan teks untuk estetika */
+      }
+      .contact-info .social-icons {
+        text-align: left; /* Ikon sosial dipusatkan */
+      }
+      .contact-info .social-icons a {
+        font-size: 1rem; /* Ikon lebih kecil lagi */
+        margin: 0 5px; /* Jarak ikon lebih kecil */
+      }
+      .map {
+        margin-top: 5px;
+    }
+}
+
