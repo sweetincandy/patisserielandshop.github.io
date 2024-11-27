@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(bg3.png);
+    font-family: Arial, sans-serif;
+}
+.modal {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+}
+.modal .icon {
+    background-color: #4CAF50;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -35px auto 20px;
+}
+.modal .icon i {
+    color: white;
+    font-size: 36px;
+}
+.modal h1 {
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+.modal p {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 20px;
+}
+.modal button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.modal button:hover {
+    background-color: #45a049;
+}

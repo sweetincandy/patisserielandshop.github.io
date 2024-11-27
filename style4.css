@@ -1,0 +1,199 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url(bg3.png);
+    font-family: 'Arial', sans-serif;
+}
+.container {
+    display: flex;
+    width: 800px;
+    height: 550px; /* Increased height */
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.left {
+    flex: 1;
+    padding: 40px;
+}
+.right {
+    flex: 1;
+    background: #ff934f;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.right h2 {
+    margin: 0;
+    font-size: 24px;
+}
+.right p {
+    margin: 10px 0;
+}
+.right button {
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+.left h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+.input-group {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-group i {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ccc;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 10px;
+    background: #ff934f;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.social-login {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+.social-login a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Untuk layar di bawah 991px */
+@media (max-width: 991px) {
+    .container {
+        flex-direction: column; /* Susunan vertikal */
+        width: 100%; /* Lebar menyesuaikan */
+        height: auto; /* Tinggi fleksibel */
+    }
+
+    .left, .right {
+        flex: none; /* Tidak berbagi ruang */
+        width: 100%; /* Lebar penuh */
+        padding: 20px; /* Kurangi padding */
+        text-align: center; /* Teks rata tengah */
+    }
+
+    .right h2, .left h2 {
+        font-size: 20px; /* Perkecil ukuran font */
+    }
+
+    .right button {
+        padding: 10px 16px; /* Kurangi padding tombol */
+    }
+
+    .social-login a {
+        font-size: 20px; /* Perkecil ikon sosial */
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Untuk layar di bawah 768px */
+@media (max-width: 768px) {
+    .container {
+        width: 100%; /* Lebar maksimal */
+        border-radius: 0; /* Hilangkan radius untuk fit layar */
+    }
+
+    .left h2, .right h2 {
+        font-size: 18px; /* Font lebih kecil */
+    }
+
+    .right button {
+        font-size: 14px; /* Ukuran tombol lebih kecil */
+        padding: 8px 12px;
+    }
+
+    .input-group input {
+        font-size: 14px; /* Perkecil input */
+        padding: 8px;
+    }
+
+    .social-login a {
+        font-size: 18px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Untuk layar di bawah 450px */
+@media (max-width: 450px) {
+    body {
+        padding: 0 10px; /* Beri ruang di sisi layar */
+    }
+
+    .container {
+        box-shadow: none; /* Hilangkan shadow */
+        border-radius: 0; /* Hilangkan radius */
+    }
+
+    .left h2, .right h2 {
+        font-size: 16px; /* Font lebih kecil */
+    }
+
+    .left, .right {
+        padding: 10px; /* Kurangi padding */
+    }
+
+    .right button {
+        padding: 8px 10px;
+        font-size: 12px; /* Ukuran tombol lebih kecil */
+    }
+
+    .social-login a {
+        font-size: 16px; /* Perkecil ikon sosial */
+        width: 25px;
+        height: 25px;
+    }
+}

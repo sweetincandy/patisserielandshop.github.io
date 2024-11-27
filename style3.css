@@ -1,0 +1,189 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url(bg3.png);
+}
+
+ .container {
+    display: flex;
+    width: 950px;
+    height: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.left {
+    background-color: #ff934f;
+    color: white;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.left h2 {
+    margin: 0;
+    font-size: 24px;
+}
+.left p {
+    margin: 10px 0;
+}
+.left button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.right {
+    background-color: white;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.right h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+.input-container {
+    position: relative;
+    width: 90%;
+    margin: 10px 0;
+}
+.input-container input {
+    width: 95%;
+    padding: 15px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.input-container .icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ccc;
+}
+.right button {
+    background-color: #ff934f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 150px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin: 10px 0;
+}
+.right .forgot-password {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+.right .social-icons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+.right .social-icons a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+/* Untuk layar di bawah 991px */
+@media (max-width: 991px) {
+    .container {
+        width: 95%;
+        height: auto;
+        flex-direction: column; /* Susun ke arah vertikal */
+    }
+
+    .left, .right {
+        width: 90%; /* Full width */
+        padding: 15px; /* Kurangi padding */
+    }
+
+    .right button {
+        padding: 10px 100px; /* Kurangi lebar tombol */
+    }
+}
+
+/* Untuk layar di bawah 768px */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Maksimalkan lebar */
+        height: auto;
+    }
+
+    .left h2, .right h2 {
+        font-size: 20px; /* Perkecil ukuran font */
+    }
+
+    .left p {
+        font-size: 14px; /* Perkecil deskripsi */
+    }
+
+    .right button {
+        padding: 10px 80px; /* Sesuaikan ukuran tombol */
+    }
+
+    .right .social-icons a {
+        font-size: 20px; /* Perkecil ikon sosial */
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Untuk layar di bawah 450px */
+@media (max-width: 450px) {
+    body {
+        padding: 0 10px; /* Tambahkan padding untuk responsif */
+    }
+
+    .left h2, .right h2 {
+        font-size: 18px; /* Font lebih kecil */
+    }
+
+    .left p {
+        font-size: 12px;
+    }
+
+    .right button {
+        padding: 8px 60px; /* Kurangi ukuran tombol */
+    }
+
+    .input-container input {
+        padding: 8px; /* Kurangi padding input */
+    }
+
+    .right .social-icons a {
+        font-size: 16px;
+        width: 30px;
+        height: 30px;
+    }
+}
